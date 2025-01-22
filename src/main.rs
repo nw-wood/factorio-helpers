@@ -22,12 +22,3 @@ fn main() {
     println!("Adjusted Cycle Time: {} seconds", adjusted_cycle_time);
     println!("Packs Per Second: {}", packs_per_second);
 }
-
-fn get_input(prompt: &str, default: f64) -> f64 {
-    use std::io::{self, Write};
-    let mut input = String::new();
-    print!("{}", prompt);
-    io::stdout().flush().unwrap();
-    io::stdin().read_line(&mut input).unwrap();
-    input.trim().parse().unwrap_or(default)
-}
